@@ -1,21 +1,21 @@
 # Model Switch for OpenClaw
 
-Switch AI models with natural language commands.
+用自然语言指令切换和添加 AI 模型。
 
-[中文版本](README_CN.md)
-
----
-
-## ✨ Features
-
-- 🔄 **Smart Switching** - "use gemini" or "切换到千问"
-- 🆕 **Add New Models** - Support 9 pre-configured providers (Google, OpenAI, Anthropic, etc.)
-- 🧠 **Auto-Detection** - Automatically detect image/reasoning support
-- ⚙️ **One-Click Config** - Auto-save API Key and model configuration
+[English Version](README.md)
 
 ---
 
-## 🚀 Installation
+## ✨ 功能特性
+
+- 🔄 **智能切换** - "use gemini" 或 "切换到千问"
+- 🆕 **新增模型** - 支持 9 个预置提供商（Google, OpenAI, Anthropic 等）
+- 🧠 **智能判断** - 自动判断模型是否支持图片/推理
+- ⚙️ **一键配置** - 自动保存 API Key 和模型配置
+
+---
+
+## 🚀 安装
 
 ```bash
 cd /root/.openclaw/workspace/skills
@@ -25,28 +25,28 @@ chmod +x model-switch/scripts/*.py
 
 ---
 
-## 📖 Usage
+## 📖 使用
 
-### Switch Models
+### 切换模型
 
 ```bash
-# Switch to Gemini
+# 切换到 Gemini
 python3 model-switch/scripts/switch-model.py gemini
 
-# Switch to Claude
+# 切换到 Claude
 python3 model-switch/scripts/switch-model.py claude
 
-# View current model
+# 查看当前模型
 python3 model-switch/scripts/list.py
 ```
 
-### Add New Models
+### 新增模型
 
 ```bash
 python3 model-switch/scripts/add-model-guide.py
 ```
 
-**Supported Providers:**
+**支持提供商：**
 1. Google (Gemini)
 2. OpenAI (GPT)
 3. Anthropic (Claude)
@@ -59,29 +59,29 @@ python3 model-switch/scripts/add-model-guide.py
 
 ---
 
-## 📋 Configuration
+## 📋 配置
 
-Model config saved at:
+模型配置保存在：
 `/root/.openclaw/workspace/skills/model-switch/config/models.json`
 
 ---
 
-## 🛠️ Scripts
+## 🛠️ 脚本说明
 
-| Script | Function |
-|--------|----------|
-| `switch-model.py` | Switch models |
-| `add-model-guide.py` | Add model wizard |
-| `list.py` | List models |
-| `check-status.py` | Check status |
+| 脚本 | 功能 |
+|------|------|
+| `switch-model.py` | 切换模型 |
+| `add-model-guide.py` | 新增模型向导 |
+| `list.py` | 查看模型列表 |
+| `check-status.py` | 检查当前状态 |
 
 ---
 
-## 📄 License
+## 📄 许可证
 
 MIT-0
 
 ---
 
-**Author:** @williamwg2025  
-**Version:** 1.0.0
+**作者：** @williamwg2025  
+**版本：** 1.0.0
