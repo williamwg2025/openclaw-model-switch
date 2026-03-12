@@ -1,11 +1,11 @@
 ---
 name: model-switch
 displayName: Model Switch
-version: 1.0.0
-description: 用自然语言指令切换和添加 AI 模型，支持智能判断模型特性和一键配置。
+version: 1.0.1
+description: 用自然语言指令切换和添加 AI 模型，支持智能判断模型特性和一键配置。会修改 OpenClaw 配置文件和重启网关。
 license: MIT-0
 acceptLicenseTerms: true
-tags: model, switch, multi-model, configuration
+tags: model, switch, multi-model, configuration, system-modify
 ---
 
 # Model Switch 技能
@@ -25,7 +25,19 @@ tags: model, switch, multi-model, configuration
 - 一键配置 API Key
 - 自动保存配置
 
-## 使用
+## 🚀 安装
+
+```bash
+cd ~/.openclaw/workspace/skills
+# 技能已安装在：~/.openclaw/workspace/skills/model-switch
+chmod +x model-switch/scripts/*.py
+```
+
+**就这么简单！所有脚本已包含，无需外部克隆。**
+
+---
+
+## 📖 使用
 
 ```bash
 # 切换模型
@@ -62,10 +74,51 @@ python3 scripts/check-status.py
 
 ## 🔒 安全说明
 
-- **本地执行：** 所有脚本在本地运行，不联网
-- **权限范围：** 仅需读取 ~/.openclaw/ 目录
-- **无外部依赖：** 不克隆外部仓库，所有代码已包含
-- **数据安全：** 不上传任何数据到外部服务器
+### 配置修改 ⚠️
+**本技能会修改 OpenClaw 配置文件：**
+
+**读取：**
+- `~/.openclaw/openclaw.json` - 主配置文件
+- `~/.openclaw/workspace/skills/model-switch/config/models.json` - 模型预设
+
+**写入：**
+- `~/.openclaw/openclaw.json` - 更新模型配置和 API Key
+- `~/.openclaw/openclaw.json.bak` - 自动备份（切换前）
+
+### 系统操作 ⚠️
+**本技能会执行系统命令：**
+- `openclaw gateway restart` - 重启网关（应用新配置）
+- `openclaw gateway status` - 检查网关状态
+
+**影响：**
+- 重启期间服务短暂不可用（约 5-10 秒）
+- 正在进行的会话可能中断
+
+### API 密钥存储 ⚠️
+**API Key 存储方式：**
+- **位置：** `~/.openclaw/openclaw.json`
+- **格式：** 明文存储（未加密）
+- **权限：** 取决于文件权限（建议 `chmod 600`）
+
+**安全建议：**
+1. 备份配置文件：`cp ~/.openclaw/openclaw.json ~/.openclaw/openclaw.json.bak`
+2. 设置文件权限：`chmod 600 ~/.openclaw/openclaw.json`
+3. 不要将配置文件提交到 Git
+4. 如需要更安全的存储，手动编辑 openclaw.json 并使用外部密钥管理
+
+### 网络访问
+- **脚本本身不联网** - 所有操作在本地执行
+- **网关重启后** - OpenClaw 会连接配置的模型 API（这是预期行为）
+
+### 数据安全
+- **不上传：** 不发送数据到外部服务器（除模型 API 调用外）
+- **本地存储：** 所有配置保存在本地
+
+### 使用建议
+1. **备份配置：** 运行前备份 `~/.openclaw/openclaw.json`
+2. **测试环境：** 先在测试环境验证
+3. **检查配置：** 新增模型后检查 openclaw.json 确认配置正确
+4. **权限控制：** 确保 openclaw.json 权限正确（`chmod 600`）
 
 ---
 
