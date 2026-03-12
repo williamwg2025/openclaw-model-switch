@@ -18,8 +18,8 @@
 ## 🚀 安装
 
 ```bash
-cd /root/.openclaw/workspace/skills
-git clone https://github.com/williamwg2025/openclaw-model-switch.git model-switch
+cd ~/.openclaw/workspace/skills
+# 技能已安装在：~/.openclaw/workspace/skills/model-switch
 chmod +x model-switch/scripts/*.py
 ```
 
@@ -62,7 +62,7 @@ python3 model-switch/scripts/add-model-guide.py
 ## 📋 配置
 
 模型配置保存在：
-`/root/.openclaw/workspace/skills/model-switch/config/models.json`
+`~/.openclaw/workspace/skills/model-switch/config/models.json`
 
 ---
 
@@ -85,3 +85,18 @@ MIT-0
 
 **作者：** @williamwg2025  
 **版本：** 1.0.0
+
+---
+
+## 🔒 安全说明
+
+- **本地执行：** 所有脚本在本地运行，不联网
+- **权限范围：** 仅需读取 ~/.openclaw/ 目录
+- **无外部依赖：** 不克隆外部仓库，所有代码已包含
+- **数据安全：** 不上传任何数据到外部服务器
+
+---
+
+**作者：** @williamwg2025  
+**版本：** 1.0.1  
+**许可证：** MIT-0

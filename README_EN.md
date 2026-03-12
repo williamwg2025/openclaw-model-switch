@@ -18,7 +18,7 @@ Switch AI models with natural language commands.
 ## 🚀 Installation
 
 ```bash
-cd /root/.openclaw/workspace/skills
+cd ~/.openclaw/workspace/skills
 git clone https://github.com/williamwg2025/openclaw-model-switch.git model-switch
 chmod +x model-switch/scripts/*.py
 ```
@@ -62,7 +62,7 @@ python3 model-switch/scripts/add-model-guide.py
 ## 📋 Configuration
 
 Model config saved at:
-`/root/.openclaw/workspace/skills/model-switch/config/models.json`
+`~/.openclaw/workspace/skills/model-switch/config/models.json`
 
 ---
 
