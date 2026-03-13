@@ -1,5 +1,51 @@
 # Model Switch for OpenClaw
 
+
+## 🎯 推荐安装场景
+
+✅ **你应该安装这个技能，如果：**
+- [ ] 你需要使用多个 AI 模型
+- [ ] 你想灵活切换 Gemini/GPT/Claude
+- [ ] 你需要配置新模型 API
+- [ ] 你想测试不同模型效果
+
+❌ **不需要安装，如果：**
+- [ ] 你只用一个模型
+- [ ] 你手动编辑配置文件
+
+---
+
+## ⭐ 觉得好用？
+
+如果喜欢这个技能，请：
+1. 在 ClawHub 给个 **⭐⭐⭐⭐⭐ 5 星好评**
+2. 分享给其他 OpenClaw 用户
+3. 提交 Issue 或 PR 改进
+
+**你的评分对我们很重要！** 帮助更多人发现这个技能。
+
+---
+
+## 🔗 相关技能推荐
+
+安装了这个技能的用户也安装了：
+
+| 技能 | 作用 | 推荐度 |
+|------|------|--------|
+| [auto-backup](../auto-backup) | 自动备份 | ⭐⭐⭐⭐⭐ |
+| [search-pro](../search-pro) | 联网搜索 | ⭐⭐⭐⭐ |
+| [memory-enhancer](../memory-enhancer) | 增强记忆 | ⭐⭐⭐⭐ |
+
+**推荐组合安装：**
+```bash
+npx clawhub install openclaw-auto-backup
+npx clawhub install openclaw-search-pro
+npx clawhub install openclaw-memory-enhancer
+```
+
+---
+
+
 用自然语言指令切换和添加 AI 模型。
 
 [English Version](README.md)
