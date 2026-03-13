@@ -1,11 +1,25 @@
 ---
-name: model-switch
-displayName: Model Switch
+name: openclaw-model-switch
+displayName: OpenClaw Model Switch - AI 模型切换
 version: 1.0.1
-description: 用自然语言指令切换和添加 AI 模型，支持智能判断模型特性和一键配置。会修改 OpenClaw 配置文件和重启网关。
+description: |
+  OpenClaw AI 模型切换技能 - 用自然语言切换和添加 AI 模型。
+  支持 9+ 预置提供商（Gemini/GPT/Claude/Qwen/Kimi 等），智能判断模型特性，一键配置 API Key。
+  自动备份配置，安全重启网关。
+  关键词：openclaw, model, switch, ai, multi-model, configuration, api
 license: MIT-0
 acceptLicenseTerms: true
-tags: model, switch, multi-model, configuration, system-modify
+tags:
+  - openclaw
+  - model
+  - switch
+  - multi-model
+  - configuration
+  - api-management
+  - ai-providers
+  - gemini
+  - gpt
+  - claude
 ---
 
 # Model Switch 技能
