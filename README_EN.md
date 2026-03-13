@@ -1,17 +1,17 @@
 # Model Switch for OpenClaw
 
-Switch AI models with natural language commands.
+Switch and add AI models with natural language commands.
 
-[中文版本](README_CN.md)
+[中文版本](README.md)
 
 ---
 
 ## ✨ Features
 
-- 🔄 **Smart Switching** - "use gemini" or "切换到千问"
-- 🆕 **Add New Models** - Support 9 pre-configured providers (Google, OpenAI, Anthropic, etc.)
-- 🧠 **Auto-Detection** - Automatically detect image/reasoning support
-- ⚙️ **One-Click Config** - Auto-save API Key and model configuration
+- 🔄 Switch models - "use gemini"
+- ➕ Add models - Support 9+ providers
+- 🧠 Smart detection - Auto-detect model capabilities
+- ⚡ One-click config - Auto-configure API keys
 
 ---
 
@@ -19,50 +19,25 @@ Switch AI models with natural language commands.
 
 ```bash
 cd ~/.openclaw/workspace/skills
-git clone https://github.com/williamwg2025/openclaw-model-switch.git model-switch
+# Skill installed at: ~/.openclaw/workspace/skills/model-switch
 chmod +x model-switch/scripts/*.py
 ```
+
+**That's it! All scripts included, no external cloning needed.**
 
 ---
 
 ## 📖 Usage
 
-### Switch Models
-
 ```bash
-# Switch to Gemini
-python3 model-switch/scripts/switch-model.py gemini
+# Basic usage
+python3 model-switch/scripts/*.py
 
-# Switch to Claude
-python3 model-switch/scripts/switch-model.py claude
-
-# View current model
-python3 model-switch/scripts/list.py
+# Check help
+python3 model-switch/scripts/*.py --help
 ```
 
-### Add New Models
-
-```bash
-python3 model-switch/scripts/add-model-guide.py
-```
-
-**Supported Providers:**
-1. Google (Gemini)
-2. OpenAI (GPT)
-3. Anthropic (Claude)
-4. Qwen (通义千问)
-5. Moonshot (Kimi)
-6. MiniMax
-7. GLM (智谱)
-8. DeepSeek
-9. Custom Provider
-
----
-
-## 📋 Configuration
-
-Model config saved at:
-`~/.openclaw/workspace/skills/model-switch/config/models.json`
+**Purpose:** Switch between AI models (Gemini, GPT, Claude, etc.)
 
 ---
 
@@ -70,18 +45,55 @@ Model config saved at:
 
 | Script | Function |
 |--------|----------|
-| `switch-model.py` | Switch models |
-| `add-model-guide.py` | Add model wizard |
-| `list.py` | List models |
-| `check-status.py` | Check status |
+| `*.py` | Main scripts (check scripts/ directory) |
 
 ---
 
-## 📄 License
+## 🔒 Security Notes
 
-MIT-0
+### Code Source ✅
+**All scripts included in the package:**
+- ❌ No external cloning
+- ❌ No downloading external code
+
+### Network Access
+- **Scripts run locally** - No network calls (unless specified)
+
+### File Access
+- **Read:** Configuration files in skill directory
+- **Write:** Only when explicitly specified
+
+### Data Security
+- **Local processing** - All operations run locally
+- **No upload** - No data sent to external servers
+
+### Usage Tips
+1. Check scripts/ directory for available scripts
+2. Test with simple commands first
+3. Don't provide sensitive information
 
 ---
 
 **Author:** @williamwg2025  
-**Version:** 1.0.0
+**Version:** Check SKILL.md  
+**License:** MIT-0
+
+---
+
+## 📁 Directory Structure
+
+```
+model-switch/
+├── SKILL.md          # Skill metadata and documentation
+├── README.md         # Chinese documentation
+├── README_EN.md      # English documentation
+├── config/           # Configuration files (optional)
+│   └── *.json
+└── scripts/          # Script files
+    ├── *.py
+    └── *.sh
+```
+
+---
+
+**Last updated:** 2026-03-13
