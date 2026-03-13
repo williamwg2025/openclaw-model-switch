@@ -121,8 +121,9 @@ python3 scripts/check-status.py
 4. 如需要更安全的存储，手动编辑 openclaw.json 并使用外部密钥管理
 
 ### 网络访问
-- **脚本本身不联网** - 所有操作在本地执行
+- **脚本调用 OpenClaw CLI** - 执行 `openclaw gateway restart` 会触发网络请求
 - **网关重启后** - OpenClaw 会连接配置的模型 API（这是预期行为）
+- **不直接联网** - 脚本本身不直接发送 HTTP 请求
 
 ### 数据安全
 - **不上传：** 不发送数据到外部服务器（除模型 API 调用外）
